@@ -36,7 +36,7 @@ interrupt [EXT_INT4] void timer0(void)
  
  if(cnt> 0x50)
  {
-  cnt -= -0x40;
+  cnt -= 0x40;
  }            
   OCR1CH = (cnt & 0xFF00) >> 8;
   OCR1CL = cnt & 0x0FF;
@@ -46,7 +46,7 @@ interrupt [EXT_INT5] void timer1(void)
 {
   if(cnt< 0x03B0)
  {
-  cnt += -0x40;
+  cnt += 0x40;
  }            
   OCR1CH = (cnt & 0xFF00) >> 8;
   OCR1CL = cnt & 0x0FF;
